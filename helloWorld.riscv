@@ -1,0 +1,14 @@
+.text
+
+# on assigne les valeurs à additionner au registre
+li t0, 4
+li a0, 20
+
+# on additionne les valeurs des registres et obn les stocks dans a0
+add a0, a0, t0
+
+# on indique qu'on affiche un entier
+li a7, 1
+
+# on appel le system
+ecall
