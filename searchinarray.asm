@@ -4,7 +4,7 @@ array: .word 1,2,3,4
 # const int size = 4
 size:  .word  4
 # const int number = 2
-number: .word  2
+number: .word  6
 
 numberError: .word  404 #Message d'erreur
 
@@ -25,10 +25,12 @@ add t5, t0, t4
 
 for:
    sub s4, t5, t0 # soustraction de deux regsitre
-   beq s4, zero, end_for # i < size ?
    lw s2, 0(t0) #Array[i]
    
    beq s10, s2, show_number # stop la boucle si array [i] = number
+   
+   beq s4, zero, end_for # i < size ?
+   
     
    addi t0, t0, 4 # current = array + i
    j for          # continue
