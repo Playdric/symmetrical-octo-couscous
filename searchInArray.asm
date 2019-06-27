@@ -1,9 +1,9 @@
 .data #variables
-#create ane array[] = {1,2,3,4}
+#create an array[] = {1,2,3,4}
 array: .word 1,2,3,4
 # size of array = 4
 size:  .word  4
-# const int number = 2
+# number = 2
 number: .word  2
 
 #Create an error message
@@ -36,7 +36,7 @@ for:
 
    beq s10, s2, display_number #if branch equal array[i] = number -> stop loop
 
-   addi t0, t0, 4 # requires an immediate operand than the register 
+   addi t0, t0, 4 # requires an immediate operand than the register and add
    j for          #continue for (jump for)
 end_for:
    mv a0, s8 # move s8 in register a0
