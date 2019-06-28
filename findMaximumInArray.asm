@@ -1,6 +1,6 @@
 .data
 
-array: .word 1, 6, 3, 23, 5
+array: .word 90, 34, 25, 23, 5
 size: .word 5
 
 .text
@@ -31,13 +31,10 @@ j increment
 # Increment counter & go to next elements
 increment: addi t4, t4, 1
 addi t0, t0, 4
-lw t2, 4(t0)
+lw t2, 0(t0)
 j loop
 
 # Display maximum
 end:mv a0, t3
 li a7, 1
 ecall
-
-
-
