@@ -16,13 +16,13 @@ for:
     sw s4, 0(t0) # values[i]= values[i+1]
     sw s3, 4(t0) # values[i+1]= values[i]
 
-    addi t0, t0, 8 # Se dÃ©placer de 8 octets pour avoir values[i+2]
-    addi t2, t2, 2 # On incrÃ©mente +2 le count
-    beq t1, t2, stopFor # On check si on est arrivÃ© Ã  la fin de la liste
-    j for # on continue la boucle
+    addi t0, t0, 8 # Se déplacer de 8 octets pour avoir values[i+2]
+    addi t2, t2, 2 # On incrémente +2 le count
+    beq t1, t2, stopFor # On check si on est arrivé Ã  la fin de la liste
+    j for 
 
 stopFor:
-    j stop # On stop la boucle for
+    j stop 
 
 stop:
     mv a0, s3 # Dans s3 se trouvera la derniere valeur du tableau swapé (ici 25)

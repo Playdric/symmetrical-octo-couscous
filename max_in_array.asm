@@ -16,10 +16,10 @@ for:
     bgt s3, s2, setMax  ## si s3 > s2, trigger setMax
     addi t2, t2, 1 # On incrémente +1 le count
     beq t1, t2, stopFor # On check si on est arrivé à la fin de la liste
-    j for # on continue la boucle
+    j for 
 
 stopFor:
-    j stop # On stop la boucle for
+    j stop 
 
 setMax:
     mv s2, s3 # On charge dans l'adresse de retour la nouvelle valeur max
