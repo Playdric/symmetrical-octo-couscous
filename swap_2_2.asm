@@ -18,7 +18,7 @@ for:
 
     addi t0, t0, 8 # Se déplacer de 8 octets pour avoir values[i+2]
     addi t2, t2, 2 # On incrémente +2 le count
-    beq t1, t2, stopFor # On check si on est arrivé Ã  la fin de la liste
+    beq t1, t2, stopFor # On check si on est arrivé à la fin de la liste
     j for 
 
 stopFor:
@@ -26,5 +26,5 @@ stopFor:
 
 stop:
     mv a0, s3 # Dans s3 se trouvera la derniere valeur du tableau swapé (ici 25)
-    li a7, 1 # Indique que sera retournÃ© un entier
+    li a7, 1 # Indique que sera retourné un entier
     ecall
